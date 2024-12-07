@@ -1,0 +1,187 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fcfcfc;
+}
+
+header {
+  background-color: #f8f8f8;
+
+  display: flex;
+  align-items: center; /* Alinea verticalmente */
+  padding: 5px 20px; /* Espaciado interno del encabezado */
+
+  width: 80.6rem;
+  font-size: 16px;
+  padding: 5px 10px; /* Espaciado interno del encabezado */
+}
+
+.logo img {
+  max-width: 9rem; /* El logo no será más ancho que 100px */
+  height: auto; /* Mantiene la proporción */
+}
+
+nav {
+  display: grid;
+  display: flex; /* Activa Flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente si es necesario */
+  height: 100px; /* Ajusta según el diseño */
+  margin-left: 20rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+nav ul li a {
+  display: block;
+
+  text-decoration: none;
+  padding: -0px 15px; /* Reducimos el padding */
+  color: #000000;
+  align-items: center;
+
+  transition: background-color 0.3s;
+}
+
+.button1 {
+  display: inline-block;
+  padding: 10px 15px;
+  font-weight: 750;
+  font-family: Arial, Helvetica, sans-serif;
+  left: 40px;
+  color: rgba(255, 255, 255, 0.795);
+  margin-inline-start: 15rem;
+
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 10rem;
+  background-color: rgba(9, 145, 145, 0.952);
+  border: 2px solid #000000; /* Grosor, estilo y color */
+}
+
+.button1:hover {
+  background-color: #030303;
+}
+
+.button2 {
+  display: inline-block;
+  padding: 10px 15px;
+  font-weight: 750;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 20px;
+  color: rgba(255, 255, 255, 0.795);
+
+  border-radius: 10rem;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  background-color: rgba(9, 145, 145, 0.952);
+  border: 2px solid #000000; /* Grosor, estilo y color */
+}
+
+.button2:hover {
+  background-color: #030303;
+}
+
+.container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  background-color: white;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product h3 {
+  margin: 10px 0;
+}
+
+.product p {
+  font-weight: bold;
+}
+
+.product button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background-color: #218838;
+}
+
+#cart {
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+#cart h2 {
+  margin-bottom: 10px;
+}
+
+#cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+#cart ul li {
+  margin-bottom: 10px;
+}
+
+#Principal {
+  background-image: url(img/Bluley\ logo.jpg);
+  width: 0%;
+  font-size: 18px;
+  filter: brightness (80%);
+  background-size: cover;
+}
+
+#hero {
+  min-height: 100hv;
+  position: relative;
+}
+
+video {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  object-fit: cover;
+}
+
+.capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1c1c1d;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+}
