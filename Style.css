@@ -1,4 +1,4 @@
-body {
+* {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -10,11 +10,9 @@ header {
 
   display: flex;
   align-items: center; /* Alinea verticalmente */
-  padding: 5px 20px; /* Espaciado interno del encabezado */
 
   width: 80.6rem;
   font-size: 16px;
-  padding: 5px 10px; /* Espaciado interno del encabezado */
 }
 
 .logo img {
@@ -54,7 +52,7 @@ nav ul li a {
   padding: 10px 15px;
   font-weight: 750;
   font-family: Arial, Helvetica, sans-serif;
-  left: 40px;
+
   color: rgba(255, 255, 255, 0.795);
   margin-inline-start: 15rem;
 
@@ -73,7 +71,7 @@ nav ul li a {
 }
 
 .button2 {
-  display: inline-block;
+  display: grid;
   padding: 10px 15px;
   font-weight: 750;
   font-family: Arial, Helvetica, sans-serif;
@@ -93,69 +91,76 @@ nav ul li a {
   background-color: #030303;
 }
 
-.container {
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.product-card {
+  width: 300px; /* Ancho del contenedor */
+  border: 1px solid #ddd; /* Borde sutil */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  overflow: hidden; /* Recorta contenido fuera de los bordes redondeados */
+  text-align: center; /* Centra el texto */
+  font-family: Arial, sans-serif; /* Fuente del texto */
+  margin: 20px; /* Espaciado alrededor del contenedor */
 }
 
-.product {
+.product-image {
+  width: 100%; /* Imagen ocupa todo el ancho */
+  height: auto; /* Mantiene la proporción */
+}
+
+.product-title {
+  font-size: 1.5em; /* Tamaño del título */
+  margin: 10px 0; /* Espaciado superior e inferior */
+  color: #333; /* Color del texto */
+}
+
+.product-description {
+  font-size: 1em; /* Tamaño de la descripción */
+  color: #666; /* Color gris para el texto */
+  margin: 10px; /* Espaciado alrededor */
+}
+
+.product-price {
+  font-size: 1.2em; /* Tamaño del precio */
+  font-weight: bold; /* Texto en negrita */
+  color: #27ae60; /* Verde */
+  display: block; /* Ocupa una línea completa */
+  margin: 10px 0; /* Espaciado */
+}
+
+.buy-button {
+  background-color: #007bff; /* Azul brillante */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px 20px; /* Relleno interno */
+  font-size: 1em; /* Tamaño del texto */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Animación de transición */
+}
+
+.buy-button:hover {
+  background-color: #0056b3; /* Oscurece el azul al pasar el ratón */
+}
+
+.product-row {
+  display: flex; /* Activa Flexbox */
+  gap: 20px; /* Espaciado entre los contenedores */
+  justify-content: center; /* Centra los contenedores horizontalmente */
+  flex-wrap: wrap; /* Permite que los elementos salten a la siguiente línea si es necesario */
+  padding: 20px; /* Espaciado interno del contenedor principal */
+}
+
+.product-card {
+  width: 300px; /* Tamaño fijo de cada tarjeta */
   border: 1px solid #ddd;
-  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  background-color: white;
-}
-
-.product img {
-  max-width: 100%;
-  height: auto;
-}
-
-.product h3 {
-  margin: 10px 0;
-}
-
-.product p {
-  font-weight: bold;
-}
-
-.product button {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.product button:hover {
-  background-color: #218838;
-}
-
-#cart {
-  margin: 20px auto;
-  max-width: 500px;
-  padding: 15px;
-  background-color: white;
-  border: 1px solid #ddd;
-}
-
-#cart h2 {
-  margin-bottom: 10px;
-}
-
-#cart ul {
-  list-style: none;
-  padding: 0;
-}
-
-#cart ul li {
-  margin-bottom: 10px;
 }
 
 #Principal {
   background-image: url(img/Bluley\ logo.jpg);
-  width: 0%;
+
   font-size: 18px;
   filter: brightness (80%);
   background-size: cover;
@@ -184,4 +189,82 @@ video {
   background: #1c1c1d;
   opacity: 0.5;
   mix-blend-mode: overlay;
+}
+
+.Titulo1 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 5rem;
+
+  width: 250px;
+  text-align: center;
+  padding: 10px;
+}
+
+.Parrafo1 {
+  font-family: Source Sans Pro, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  width: 400px;
+  padding: 20px;
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+}
+
+.contenedor img {
+  height: 400px;
+  margin-inline-start: 10rem;
+}
+
+.contenedor p {
+  text-align: center;
+  font-weight: 600;
+  width: 400px;
+  margin-left: 15rem;
+}
+
+.video-text-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+  padding: 100px;
+  margin-left: 10rem;
+}
+
+.circular-video {
+  position: unset;
+
+  width: 380px; /* Ancho del video */
+  height: 300px;
+
+  border: 3px solid #ddd; /* Opcional: Borde decorativo */
+  overflow: hidden; /* Oculta cualquier parte fuera de los bordes */
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around; /* Espacia las columnas */
+  background-color: rgba(9, 145, 145, 0.952);
+  text-align: center;
+
+  padding: 80px;
+}
+
+.footer div {
+  max-width: 300px;
+}
+
+.footer h3 {
+  margin-top: 0;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
